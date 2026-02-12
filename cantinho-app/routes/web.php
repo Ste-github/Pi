@@ -13,4 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[\App\Http\Controllers\vendasController::Class,'paginaInicial']);
+
+//Páginas Login 
+
+
+
+
+//Páginas CRUD Produto +Cliente 
+Route::get('/gerenciar',[\App\Http\Controllers\GerenciarController::Class,'paginaGerenciar']);
+Route::get('/cadproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
+Route::get('/atualizarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
+Route::get('/consultarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
+Route::get('/excluirproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
+
+Route::get('/cadcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaCadcliente']); 
+Route::get('/atualizarcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaAtucliente']); 
+Route::get('/consultarcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaConsulcliente']); 
+Route::get('/excluircliente',[\App\Http\Controllers\GerenciarController::Class,'paginaExcluircliente']); 
+//---------------------------------------------------------------------------------------------------------
+//Páginas Vendas 
+Route::get('/produtos',[\App\Http\Controllers\produtosController::Class,'paginaProdutos']);
+Route::get('/itensVenda',[\App\Http\Controllers\itensvendaController::Class,'paginaItens']);
+Route::get('/vendas',[\App\Http\Controllers\vendasController::Class,'paginaVendas']); 

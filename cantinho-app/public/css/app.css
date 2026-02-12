@@ -1,0 +1,233 @@
+
+        body {
+            background-color: #d9d9d9;
+        }
+
+        .topo {
+            background-color: #0f6b3d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .barra-busca {
+            background: #cfcfcf;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .tabela-vendas {
+            margin-top: 20px;
+            border: 2px solid #5a2e2e;
+        }
+
+        .tabela-vendas thead {
+            background-color: #5a2e2e;
+            color: white;
+        }
+
+        .resumo {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .resumo-esquerda {
+            background-color: #5a2e2e;
+            color: white;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .resumo-direita {
+            background-color: #e7d3b5;
+            flex: 1;
+            padding: 20px;
+        }
+
+        .btn-custom {
+            background-color: #5a2e2e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #3e1f1f;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+/*--------------------------------------------------------*/
+     /* BOTOES DA TELA PRINCIPAL */
+
+.menu-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* espaço entre os botões */
+    margin-top: 80px;
+}
+
+.menu-principal .btn-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 320px;
+    height: 60px;
+
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+
+    background-color: #5C4033; /* marrom */
+    color: #F5F5DC; /* bege */
+
+    border: 2px solid #E6D5B8; /* borda bege mais suave */
+    border-radius: 12px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+/* Efeito hover igual botão moderno */
+.menu-principal .btn-custom:hover {
+    background-color: #6d4c41;
+    transform: scale(1.03);
+}
+/*---------------------------------------------------------------------------*/
+/* ===============================
+   FUNDO DA TELA
+================================= */
+
+body {
+    background-color: #dcdcdc; 
+    /* Cor de fundo cinza claro */
+}
+
+
+/* ===============================
+   CONTAINER DO FORMULÁRIO
+================================= */
+
+.form-produto {
+    width: 900px; 
+    /* Largura total do formulário */
+
+    margin: 100px auto; 
+    /* Centraliza na tela (auto = esquerda e direita) */
+
+    display: grid; 
+    /* Ativa o modo grid (ótimo para colunas) */
+
+    grid-template-columns: 1fr 1fr; 
+    /* Divide em 2 colunas iguais */
+
+    gap: 50px 80px; 
+    /* 50px entre linhas e 80px entre colunas */
+}
+
+
+/* ===============================
+   GRUPO (LABEL + INPUT)
+================================= */
+
+.campo {
+    display: flex;
+    flex-direction: column; 
+    /* Label fica em cima do input */
+}
+
+
+/* ===============================
+   LABEL
+================================= */
+
+.campo label {
+    font-weight: bold; 
+    /* Texto em negrito */
+
+    margin-bottom: 8px; 
+    /* Espaço entre label e input */
+
+    font-size: 18px;
+}
+
+
+/* ===============================
+   INPUT
+================================= */
+
+.campo input {
+    width: 100%;
+    height: 45px;
+
+    background-color: #E6D5B8; 
+    /* Bege */
+
+    border: 2px solid #5C4033; 
+    /* Borda marrom */
+
+    border-radius: 12px; 
+    /* Cantos arredondados */
+
+    padding-left: 15px; 
+    /* Espaço interno à esquerda */
+
+    font-size: 16px;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+
+    outline: none; 
+    /* Remove borda azul ao clicar */
+}
+
+
+/* ===============================
+   BOTÕES
+================================= */
+
+.area-botoes {
+    grid-column: span 2; 
+    /* Faz os botões ocuparem as 2 colunas */
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+
+.btn-custom {
+    width: 260px;
+    height: 55px;
+
+    background-color: #5C4033;
+    color: #F5F5DC;
+
+    border: 2px solid #E6D5B8;
+    border-radius: 12px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #6d4c41;
+    transform: scale(1.03);
+}

@@ -9,4 +9,23 @@ class itensvendaModel extends Model
 {
     use HasFactory;
     protected $table='itens_venda';
+    
+     protected $fillable = [
+        'venda_id',
+        'produto_id',
+        'quantidade',
+        'preco_unitario',
+        'subtotal',
+    ];
+
+    public function venda()
+    {
+        return $this->belongsTo(Venda::class);
+    }
+
+    public function produto()
+    {
+        return $this->belongsTo(Produto::class);
+    }
 }
+
