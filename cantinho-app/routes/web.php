@@ -18,13 +18,24 @@ use Illuminate\Support\Facades\Route;
 
 
 
+//Telas de Login do Caio
+Route::get('/',[\App\Http\Controllers\loginController::Class,'paginaLogin']);
+Route::get('/cadLogin',[\App\Http\Controllers\loginController::Class,'paginaCadlogin']);
+
+
+
+
+
+
+
+
 
 //Páginas CRUD Produto +Cliente 
 Route::get('/gerenciar',[\App\Http\Controllers\GerenciarController::Class,'paginaGerenciar']);
 Route::get('/cadproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
-Route::get('/atualizarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
-Route::get('/consultarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
-Route::get('/excluirproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
+Route::get('/atualizarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaAtuproduto']); 
+Route::get('/consultarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaConsulproduto']); 
+Route::get('/excluirproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaExcluirproduto']); 
 
 Route::get('/cadcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaCadcliente']); 
 Route::get('/atualizarcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaAtucliente']); 

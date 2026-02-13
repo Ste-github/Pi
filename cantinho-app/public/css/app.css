@@ -1,6 +1,10 @@
 
-        body {
+     
+     /*Fundo padrão das telas Principais e*/
+     
+     body {
             background-color: #d9d9d9;
+            font-family: 'Orelega One', cursive;
         }
 
         .topo {
@@ -17,6 +21,11 @@
             padding: 15px;
             margin-top: 15px;
         }
+ /*-------------------------TELA LOGIN-------------------------------------------------*/
+
+/*--------------------------------------------------------------------*/
+
+
 
         .tabela-vendas {
             margin-top: 20px;

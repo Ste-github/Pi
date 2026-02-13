@@ -24,9 +24,9 @@
 
         <div class="area-botoes">
             <button class="btn-custom">Finalizar Cadastro</button>
-            <button class="btn-custom">Consultar Produto</button>
-        </div>
-
-    </form>
+        </form>
+            
+         <a class="btn-custom" href="consultarproduto">Consultar Produtos</a> <br>
+    
 
 </x-layout>
