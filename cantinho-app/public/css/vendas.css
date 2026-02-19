@@ -1,0 +1,162 @@
+/* Fundo geral */
+.pdv-container {
+    width: 90%;
+    padding: 30px 60px;
+   
+}
+
+/* Título */
+.pdv-titulo {
+    text-align: center;
+    background-color: #0f6d3b;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Barra topo */
+.pdv-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.pdv-tipo label {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* Busca */
+.pdv-busca input {
+    width: 100%;
+    padding: 15px;
+    background-color: #cfcfcf;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Tabela */
+.pdv-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.pdv-tabela thead {
+    background-color: #5a2e2e;
+    color: white;
+}
+
+.pdv-tabela th,
+.pdv-tabela td {
+    padding: 18px;
+    border: 1px solid #5a2e2e;
+    text-align: center;
+    font-size: 18px;
+}
+
+.pdv-tabela tbody tr {
+    background-color: #dcdcdc;
+}
+
+/* Resumo */
+.pdv-resumo {
+    display: flex;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.pdv-esquerda {
+    flex: 1;
+    background-color: #5a2e2e;
+    color: white;
+    padding: 25px;
+    font-size: 20px;
+}
+
+.pdv-direita {
+    flex: 1;
+    background-color: #e7d3b5;
+    padding: 25px;
+    font-size: 22px;
+}
+
+.pdv-direita h3 {
+    margin-top: 15px;
+    font-size: 28px;
+}
+
+/* Botões */
+.pdv-botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.pdv-btn {
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 2px 3px 0px rgba(0,0,0,0.3);
+}
+
+.pdv-btn.cancelar {
+    background-color: #5a2e2e;
+    color: white;
+}
+
+.pdv-btn.finalizar {
+    background-color: #5a2e2e;
+    color: white;
+}
+
+.pdv-btn:hover {
+    opacity: 0.85;
+}
+/*-------------------------------------------------*/
+.pagamento-box {
+    margin-top: 25px;
+    background-color: #dcdcdc;
+    padding: 25px;
+    border: 2px solid #5a2e2e;
+}
+
+.pagamento-box h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Opções */
+.pagamento-opcoes {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Campos */
+.pagamento-campos {
+    display: flex;
+    gap: 40px;
+}
+
+.campo-pagamento {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-pagamento label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+

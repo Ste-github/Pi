@@ -1,31 +1,40 @@
-<x-layout titulo="Consulta de Produto">
+<x-layout titulo="Consultar Produtos">
+<div class="consultar-container">
 
-    <input type="text" class="form-control mb-3" placeholder="Digite o nome do produto...">
+    
 
-    <table class="table table-bordered">
+    <input type="text" placeholder="Digite o nome do produto..." class="input-busca">
+
+    <table class="tabela-clientes">
         <thead>
             <tr>
-                <th>Nome</th>
+                 <th>Nome</th>
                 <th>Valor</th>
                 <th>Valor com Desconto</th>
                 <th>Código</th>
                 <th>Em Estoque</th>
+                
             </tr>
         </thead>
-
         <tbody>
             <tr>
-                <td>Coxinha</td>
-                <td>R$ 9,90</td>
-                <td>R$ 7,90</td>
+               <td>Coxinha</td>
+                <td>R$9,90</td>
+                <td>R$7,90</td>
                 <td>1</td>
                 <td>15</td>
-                
+              
             </tr>
         </tbody>
     </table>
+   
+      
+                    <div class="area-botoes">
+                    <a class="btn-voltar" href="homeprodutos">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </a>
+                </div>
 
-    <button class="btn btn-primary">+ Novo Produto</button>
-    <button class="btn btn-danger">Excluir</button>
-
+        
+</div>
 </x-layout>

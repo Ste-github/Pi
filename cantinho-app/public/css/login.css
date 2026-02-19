@@ -1,0 +1,132 @@
+/*---------------------TELA LOGIN-----caixa---------------------------------*/
+        @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+
+        .container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .login-box {
+            height: 500px;
+            width: 500px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+        }
+        .login-box img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        /*----------------------------------------*/
+                        /*botoes de usuario e senha no login graças  DEUS*/    
+            .login-group {
+                position: relative;
+                margin-bottom: 15px;
+            }
+
+            .login-group i {
+                position: absolute;
+                left: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #5f8f6b;
+                font-size: 18px;
+            }
+
+            .login-group input {
+                width: 100%;
+                padding: 10px 10px 10px 38px;
+                border-radius: 10px;
+                border: 1px solid #d6cfc7;
+                background-color: #fffdf9;
+            }
+
+        /*-------------------------------------*/
+        /* Botão entrar */
+        .btn-login {
+            background-color: #c8e6c9;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-login i {
+            margin-right: 6px;
+        }
+
+/*--------------------------------------------------------------------*/
+            .cadastre-se {
+                margin-top: 20px;
+                text-align: center;
+            }
+
+            .cadastre-se a {
+                display: inline-block;
+                padding: 10px 18px;
+                border-radius: 10px;
+                background: #4e7c5a;
+                color: rgb(228, 224, 224);
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 16px;
+                transition: all 0.3s ease;
+            }
+
+            .cadastre-se a:hover {
+                background:  #472010 ;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(218, 165, 165, 0.15);
+            }
+            /*///////////////////////////////////////////////////////////*/
+            /*PRIMEIRO CADASTRO */
+   
+ @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+        
+
+.campo {
+    justify-content: left;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.botao {
+    margin-top: 70px;
+    margin-left: 5px;
+    width: 25%;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 0;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    justify-content: left;
+}
+
+.subtitulo {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.texto {
+    margin-top: 100px;
+    text-align: left;
+}

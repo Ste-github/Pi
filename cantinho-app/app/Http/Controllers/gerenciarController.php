@@ -9,7 +9,14 @@ class gerenciarController extends Controller
     public function paginaGerenciar(){
             return view('paginas.gerenciar');
     }
-   
+     public function paginaHomeProdutos(){
+            return view('paginas.homeprodutos');
+    }
+
+     public function paginaHomeClientes(){
+            return view('paginas.homeclientes');
+    }
+
     public function paginaCadproduto(){
         return view('paginas.cadproduto');
     }

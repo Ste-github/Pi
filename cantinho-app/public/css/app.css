@@ -1,79 +1,28 @@
-
+ /*Fundo padrão das telas Principais e*/
      
-     /*Fundo padrão das telas Principais e*/
-     
-     body {
-            background-color: #d9d9d9;
-            font-family: 'Orelega One', cursive;
-        }
+body {
+    background-color: #d9d9d9;
+    font-family: 'Orelega One', cursive; 
+}
 
-        .topo {
-            background-color: #0f6b3d;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 22px;
-        }
+.topo {
+    background-color: #0f6b3d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
 
-        .barra-busca {
-            background: #cfcfcf;
-            padding: 15px;
-            margin-top: 15px;
-        }
- /*-------------------------TELA LOGIN-------------------------------------------------*/
+.barra-busca {
+    background: #cfcfcf;
+    padding: 15px;
+    margin-top: 15px;
+}
+ 
 
-/*--------------------------------------------------------------------*/
-
-
-
-        .tabela-vendas {
-            margin-top: 20px;
-            border: 2px solid #5a2e2e;
-        }
-
-        .tabela-vendas thead {
-            background-color: #5a2e2e;
-            color: white;
-        }
-
-        .resumo {
-            display: flex;
-            margin-top: 20px;
-        }
-
-        .resumo-esquerda {
-            background-color: #5a2e2e;
-            color: white;
-            flex: 1;
-            padding: 20px;
-        }
-
-        .resumo-direita {
-            background-color: #e7d3b5;
-            flex: 1;
-            padding: 20px;
-        }
-
-        .btn-custom {
-            background-color: #5a2e2e;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            border: none;
-        }
-
-        .btn-custom:hover {
-            background-color: #3e1f1f;
-        }
-
-        .botoes {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
 /*--------------------------------------------------------*/
-     /* BOTOES DA TELA PRINCIPAL */
+    /* BOTOES DA TELA PRINCIPAL */
 
 .menu-principal {
     display: flex;
@@ -87,156 +36,204 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 320px;
     height: 60px;
-
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-
     background-color: #5C4033; /* marrom */
     color: #F5F5DC; /* bege */
-
     border: 2px solid #E6D5B8; /* borda bege mais suave */
     border-radius: 12px;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-
     transition: all 0.3s ease;
 }
 
-/* Efeito hover igual botão moderno */
+/* Efeito hover*/
 .menu-principal .btn-custom:hover {
     background-color: #6d4c41;
     transform: scale(1.03);
 }
 /*---------------------------------------------------------------------------*/
-/* ===============================
-   FUNDO DA TELA
-================================= */
-
-body {
-    background-color: #dcdcdc; 
-    /* Cor de fundo cinza claro */
-}
-
-
-/* ===============================
-   CONTAINER DO FORMULÁRIO
-================================= */
-
+/*CRUD DE PRODUTOS*/
+/* Campos marrom de todos Formularios  */
 .form-produto {
     width: 900px; 
-    /* Largura total do formulário */
-
-    margin: 100px auto; 
-    /* Centraliza na tela (auto = esquerda e direita) */
-
-    display: grid; 
-    /* Ativa o modo grid (ótimo para colunas) */
-
-    grid-template-columns: 1fr 1fr; 
-    /* Divide em 2 colunas iguais */
-
+    margin: 100px auto; /* Centraliza na tela (auto = esquerda e direita) */
+    display: grid; /* Ativa o modo grid  */
+    grid-template-columns: 1fr 1fr;   /* Divide em 2 colunas iguais */
     gap: 50px 80px; 
-    /* 50px entre linhas e 80px entre colunas */
 }
-
-
-/* ===============================
-   GRUPO (LABEL + INPUT)
-================================= */
 
 .campo {
     display: flex;
-    flex-direction: column; 
-    /* Label fica em cima do input */
+    flex-direction: column; /* Label fica em cima do input */
 }
-
-
-/* ===============================
-   LABEL
-================================= */
 
 .campo label {
     font-weight: bold; 
-    /* Texto em negrito */
-
     margin-bottom: 8px; 
-    /* Espaço entre label e input */
-
     font-size: 18px;
 }
-
-
-/* ===============================
-   INPUT
-================================= */
 
 .campo input {
     width: 100%;
     height: 45px;
-
     background-color: #E6D5B8; 
-    /* Bege */
-
     border: 2px solid #5C4033; 
-    /* Borda marrom */
-
-    border-radius: 12px; 
-    /* Cantos arredondados */
-
-    padding-left: 15px; 
-    /* Espaço interno à esquerda */
-
+    border-radius: 12px; /* Cantos arredondados */ 
+    padding-left: 15px; /* Espaço interno à esquerda */
     font-size: 16px;
-
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    /* Sombra suave */
-
-    outline: none; 
-    /* Remove borda azul ao clicar */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    outline: none;   /* Remove borda azul ao clicar */
 }
 
-
-/* ===============================
-   BOTÕES
-================================= */
-
+/*centraliza os botoes de confirmação do gerenciamento*/
 .area-botoes {
     grid-column: span 2; 
-    /* Faz os botões ocuparem as 2 colunas */
-
     display: flex;
     justify-content: center;
     gap: 40px;
-
     margin-top: 40px;
 }
-
-
+/*campos claros dos formularios*/
+        .input-group {
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f3e0c7;
+            font-size: 14px;
+            justify-content: center; 
+        }
+/*-------------------------------------------------------------------------------*/
+/*BOTOES MARROM DAS HOME GERENCIAR PRODUTO E CLIENTE */
 .btn-custom {
     width: 260px;
     height: 55px;
-
     background-color: #5C4033;
     color: #F5F5DC;
-
     border: 2px solid #E6D5B8;
     border-radius: 12px;
-
     font-size: 20px;
     font-weight: bold;
-
     cursor: pointer;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-
     transition: 0.3s;
 }
 
+/*efeito dos botoes*/
 .btn-custom:hover {
     background-color: #6d4c41;
     transform: scale(1.03);
+}
+.btn-custom i {
+    margin-right: 20px;
+    font-size: 30px;
+}
+/*--------------------------------------------------------------------------------*/
+/*botoes diferentes : excluir */
+.btn-excluir {
+    background-color: white;
+    color: #7a1f1f;
+    border: 2px solid #7a1f1f;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-excluir:hover {
+    background-color: #7a1f1f;
+    color: white;
+}
+/*confirmar*/
+.btn-confirmar {
+    background-color: white;
+    color: #0a521f;
+    border: 2px solid #07271b;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.btn-confirmar:hover {
+    background-color: #0d3f2c;
+    color: white;
+}
+.btn-voltar {
+    background-color: white;
+    color: #5dade2;
+    border: 2px solid #5dade2;
+    padding: 12px 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-flex;       /* MUITO IMPORTANTE */
+    align-items: center;        /* centraliza ícone */
+    justify-content: center;
+    gap: 8px;                   /* espaço entre ícone e texto */
+}
+.btn-voltar:hover {
+    background-color: #5dade2;
+    color: white;
+}
+
+/*---------------CONSULTAR--------------------------------------------*/
+.consultar-container {
+    min-height: 300px; /*altura do container*/
+    background-color: #f5efe6; /* bege clarinho */
+    padding: 30px;
+    border-radius: 15px;
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.consultar-container h2 {
+    text-align: center;
+    color: #572417; /* verde pastel */
+    margin-bottom: 20px;
+}
+.input-busca {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d6cfc7;
+    margin-bottom: 20px;
+    background-color: #fffdf9;
+}
+.tabela-clientes {
+    width: 100%;
+    height: 150px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tabela-clientes th {
+    background-color: #dbeadf; /* verde bem clarinho */
+    color: #41300b;
+    padding: 12px;
+}
+.tabela-clientes td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #f0e8df;
+}
+.tabela-clientes tr:hover {
+    background-color: #f1f2f9;
+}
+.btn-editar {
+    background-color: #6ab86a; /* verde pastel */
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-editar:hover {
+    background-color: #a5d6a7;
 }

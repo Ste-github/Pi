@@ -1,4 +1,4 @@
-<x-layout titulo="Excluir Produtos">
+<x-layout titulo="Excluir Cliente">
 
     <form class="form-produto">
 
@@ -28,17 +28,15 @@
             <button class="btn-excluir">
                 <i class="bi bi-trash"></i> Excluir
             </button>
-        </div>
-
+        </div> 
 
         <div class="area-botoes">
-            <a class="btn-voltar" href="homeprodutos">
+            <a class="btn-voltar" href="homeclientes">
             <i class="bi bi-arrow-left-circle"></i> Voltar
             </a>
         </div>
 
     </form>
 
- 
 
 </x-layout>

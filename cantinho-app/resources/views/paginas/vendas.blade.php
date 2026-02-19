@@ -1,17 +1,35 @@
 <x-layout titulo="TELA DE VENDAS">
 
-    <div class="barra-busca">
-        <strong>Tipo de venda</strong>
-        <input type="checkbox"> Público
-        <input type="checkbox"> Funcionários
-        <span style="float:right">Atendente: Lucia</span>
+<div class="pdv-container">
 
-        <div class="mt-3">
-            <input type="text" class="form-control" placeholder="Digite o nome ou código do produto...">
+   
+
+    <!-- Barra superior -->
+    <div class="pdv-topo">
+        <div class="pdv-tipo">
+            <strong>Tipo de venda</strong>
+
+            <label>
+                <input type="checkbox" checked> Público
+            </label>
+
+            <label>
+                <input type="checkbox"> Funcionários
+            </label>
+        </div>
+
+        <div class="pdv-atendente">
+            👤 Atendente : Lucia
         </div>
     </div>
 
-    <table class="table tabela-vendas text-center">
+    <!-- Campo busca -->
+    <div class="pdv-busca">
+        <input type="text" placeholder="Digite o nome ou código do produto...">
+    </div>
+
+    <!-- Tabela -->
+    <table class="pdv-tabela">
         <thead>
             <tr>
                 <th>Item</th>
@@ -21,6 +39,7 @@
                 <th>Total</th>
             </tr>
         </thead>
+
         <tbody>
             <tr>
                 <td>01</td>
@@ -29,6 +48,7 @@
                 <td>R$9,90</td>
                 <td>R$19,80</td>
             </tr>
+
             <tr>
                 <td>02</td>
                 <td>Café c/ Leite Médio</td>
@@ -39,22 +59,25 @@
         </tbody>
     </table>
 
-    <div class="resumo">
-        <div class="resumo-esquerda">
-            <p>Subtotal: R$28,30</p>
-            <p>Desconto: R$0,00</p>
+    <!-- Resumo -->
+    <div class="pdv-resumo">
+        <div class="pdv-esquerda">
+            <p>Subtotal: <strong>R$28,30</strong></p>
+            <p>Desconto: <strong>R$0,00</strong></p>
         </div>
 
-        <div class="resumo-direita">
-            <p>Desconto: R$0,00</p>
-            <h3><strong>TOTAL: R$28,30</strong></h3>
+        <div class="pdv-direita">
+            <p>Desconto: <strong>R$0,00</strong></p>
+            <h3>TOTAL: R$28,30</h3>
         </div>
     </div>
 
-    <section class="botoes">
-        <a class="btn-custom" href="">Cancelar Compra</a>
-        <a class="btn-custom" href="itensVenda">Finalizar Compra</a>
-    </section>
+    <!-- Botões -->
+    <div class="pdv-botoes">
+        <a href="gerenciar" class="pdv-btn cancelar">Cancelar Compra</a>
+        <a href="itensVenda" class="pdv-btn finalizar">Finalizar Compra</a>
+    </div>
+
+</div>
 
 </x-layout>
- 

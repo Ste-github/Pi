@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -32,12 +33,15 @@ Route::get('/cadLogin',[\App\Http\Controllers\loginController::Class,'paginaCadl
 
 //Páginas CRUD Produto +Cliente 
 Route::get('/gerenciar',[\App\Http\Controllers\GerenciarController::Class,'paginaGerenciar']);
+Route::get('/homeprodutos',[\App\Http\Controllers\GerenciarController::Class,'paginaHomeProdutos']);
+Route::get('/homeclientes',[\App\Http\Controllers\GerenciarController::Class,'paginaHomeClientes']);
+
 Route::get('/cadproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaCadproduto']); 
 Route::get('/atualizarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaAtuproduto']); 
 Route::get('/consultarproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaConsulproduto']); 
 Route::get('/excluirproduto',[\App\Http\Controllers\GerenciarController::Class,'paginaExcluirproduto']); 
 
-Route::get('/cadcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaCadcliente']); 
+Route::get('/cadclientes',[\App\Http\Controllers\GerenciarController::Class,'paginaCadcliente']); 
 Route::get('/atualizarcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaAtucliente']); 
 Route::get('/consultarcliente',[\App\Http\Controllers\GerenciarController::Class,'paginaConsulcliente']); 
 Route::get('/excluircliente',[\App\Http\Controllers\GerenciarController::Class,'paginaExcluircliente']); 

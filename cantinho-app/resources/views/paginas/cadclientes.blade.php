@@ -1,23 +1,63 @@
-<x-layout titulo="Cadastrar Cliente">
-    <h1>Cadastrar Cliente</h1>
+<x-layout titulo="Cadastro de Cliente">
 
-    <label>Nome do cliente</label><br>
-    <input type="text" id="nomeProduto" name="nomeProduto" placeholder="Nome..."/><br><br>
+    <form class="form-produto">
 
-    <label>E-mail do Cliente</label><br>
-    <input type="text" id="emaildocliente" name="emaildocliente" placeholder="E-mail..."/><br><br>
+        <!-- NOME -->
+        <div class="campo">
+            <label>Nome</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-person"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Nome completo...">
+            </div>
+        </div>
 
-    <label>CPF do Cliente</label><br>
-    <input type="text" id="CPFdoclinte" name="CPFdoClinete" placeholder="CPF..."><br><br>
+        <!-- EMAIL -->
+        <div class="campo">
+            <label>Email</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                </span>
+                <input type="email" class="form-control" placeholder="email@exemplo.com">
+            </div>
+        </div>
 
-    <label></label>Telefone do Cliente<br>
-    <input type="text" id="telefonedocliente" name="telefonedocliente" placeholder="Telefone..."><br><br>
+        <!-- CPF -->
+        <div class="campo">
+            <label>CPF</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-person-vcard"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Apenas números...">
+            </div>
+        </div>
 
-    <label>Valor Que o Cliente Deve</label>
-    <input type="text" id="valorqueoclientedeve" name="valorqueoclientedeve" placeholder="Valor que o Cliente Deve...">
+        <!-- TELEFONE -->
+        <div class="campo">
+            <label>Telefone</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-telephone"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="(00) 00000-0000">
+            </div>
+        </div>
 
-    <button>Finalizar Cadastro</button><br><br>
-    
-    <button>Voltar</button><br><br>
+        <div class="area-botoes">
+            <button class="btn-confirmar">
+                <i class="bi bi-check-circle"></i> Finalizar Cadastro
+            </button>
+        </div>
+        <div class="area-botoes">
+             <a class="btn-voltar" href="homeclientes">
+        <i class="bi bi-arrow-left"></i> Voltar
+    </a>
+        </div>
+
+    </form>
+ 
 
 </x-layout>
