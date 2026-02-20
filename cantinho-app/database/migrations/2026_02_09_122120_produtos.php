@@ -11,19 +11,18 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+      public function up()
     {
-         Schema::create('produtos', function (Blueprint $table) {
-            $table->id();
-
-            $table->string('nome');
-            $table->decimal('preco', 10, 2);
-            $table->integer('estoque')->default(0);
-            $table->string('sabor')->nullable();
-
+        //Criar o meu schema
+        Schema::create('produtos', function (Blueprint $table){
+            $table->increments('id');
+            $table->longText('nomeProduto');
+            $table->decimal('valor', 10, 2);
+            $table->decimal('valorDesconto', 10, 2);
+            $table->integer('estoque');
             $table->timestamps();
         });
-    }
+    }//Fim do up
 
     /**
      * Reverse the migrations.
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produtos');
-    }
+        Schema::dropIfExist('produtos');
+    }//Fim do down
 };

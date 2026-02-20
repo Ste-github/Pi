@@ -25,13 +25,6 @@
         </div>
 
         <div class="area-botoes">
-            <button class="btn-excluir">
-                <i class="bi bi-trash"></i> Excluir
-            </button>
-        </div>
-
-
-        <div class="area-botoes">
             <a class="btn-voltar" href="homeprodutos">
             <i class="bi bi-arrow-left-circle"></i> Voltar
             </a>

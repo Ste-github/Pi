@@ -11,22 +11,19 @@ return new class extends Migration
      *
      * @return void
      */
-    public function up()
+      public function up()
     {
-         {
-        Schema::create('clientes', function (Blueprint $table) {
-            $table->id();
-
-            $table->string('nome');
-            $table->string('telefone');
-            $table->string('email');
-            $table->string('cpf')->unique();
-            $table->decimal('saldo_devedor', 10, 2)->default(0);
-
+        //Criar o meu schema
+        Schema::create('cliente', function (Blueprint $table){
+            $table->increments('id');
+            $table->longText('nomeCliente');
+            $table->longText('cpf');
+            $table->longtext('email');
+            $table->longText('telefone');
+            $table->decimal('divida', 10,2);
             $table->timestamps();
         });
-    }
-    }
+    }//Fim do up
 
     /**
      * Reverse the migrations.
@@ -35,7 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clientes');
-    }
-        
+        Schema::dropIfExist('cliente');
+    }//Fim do down
 };

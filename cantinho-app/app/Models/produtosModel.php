@@ -9,15 +9,4 @@ class produtosModel extends Model
 {
     use HasFactory;
     protected $table='produtos';
-
-     protected $fillable = [
-        'nome',
-        'preco',
-        'estoque',
-        'sabor',
-     ];
-     public function itensVenda()
-    {
-        return $this->hasMany(ItemVenda::class);
-    }
 }

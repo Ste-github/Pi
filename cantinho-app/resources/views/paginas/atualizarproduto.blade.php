@@ -1,6 +1,5 @@
 <x-layout titulo="Atualização de Produto">
-
-    <form class="form-produto">
+    <form class="form-produto" action="../atualizarP/{{$dado->id}}" method="GET">
 
         <!-- Código -->
         <div class="campo">
@@ -9,7 +8,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-upc-scan"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Código...">
+                <input class="form-control" type="number" id="id" name="id" value="{{$dado->id}}" disabled required>
             </div>
         </div>
 
@@ -20,7 +19,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-box-seam"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Nome...">
+                <input class="form-control" type="text" name="nomeProduto" id="nomeProduto" value="{{$dado->nomeProduto}}">
             </div>
         </div>
 
@@ -31,7 +30,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-currency-dollar"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Valor...">
+                <input class="form-control" type="text" name="valor" id="valor" value="{{$dado->valor}}">
             </div>
         </div>
 
@@ -42,19 +41,26 @@
                 <span class="input-group-text">
                     <i class="bi bi-tag"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Com desconto...">
+                <input class="form-control" type="text" name="valorDesconto" id="valorDesconto" value="{{$dado->valorDesconto}}">
             </div>
         </div>
 
         <div class="area-botoes">
-            <button class="btn-confirmar">
+            <button type="submit" class="btn-confirmar">
                 <i class="bi bi-arrow-repeat"></i> Atualizar
             </button>
         </div>
+
         <div class="area-botoes">
-             <a class="btn-voltar" href="homeprodutos">
-        <i class="bi bi-arrow-left"></i> Voltar
-    </a>
+            <a href="/excluirP/{{$dado->id}}" class="btn-excluir">
+                <i class="bi bi-trash"></i> Excluir
+            </a>
+        </div>
+
+        <div class="area-botoes">
+             <a class="btn-voltar" href="/consultarPaginaInicialP">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </a>
         </div>
     </form>
 

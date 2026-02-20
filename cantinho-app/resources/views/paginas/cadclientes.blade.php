@@ -1,6 +1,5 @@
 <x-layout titulo="Cadastro de Cliente">
-
-    <form class="form-produto">
+    <form class="form-produto" action="cadclientes/SalvarC" method="GET">
 
         <!-- NOME -->
         <div class="campo">
@@ -9,7 +8,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-person"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Nome completo...">
+                <input type="text" name="nomeCliente" class="form-control" placeholder="Digite Seu Nome..." id="nomeCliente" required>
             </div>
         </div>
 
@@ -20,7 +19,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-envelope"></i>
                 </span>
-                <input type="email" class="form-control" placeholder="email@exemplo.com">
+                <input type="email" name="email" class="form-control" placeholder="Digite Seu Email..." id="email" required>
             </div>
         </div>
 
@@ -31,7 +30,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-person-vcard"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Apenas números...">
+                <input type="text" name="cpf" class="form-control" placeholder="Dgite Seu CPF..." id="cpf" required>
             </div>
         </div>
 
@@ -42,22 +41,30 @@
                 <span class="input-group-text">
                     <i class="bi bi-telephone"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="(00) 00000-0000">
+                <input type="text" name="telefone" class="form-control" placeholder="Digite Seu Telefone..." id="telefone" required>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Dívida</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-telephone"></i>
+                </span>
+                <input type="text" name="divida" class="form-control" placeholder="Dívida do Cliente..." id="divida" required>
             </div>
         </div>
 
         <div class="area-botoes">
-            <button class="btn-confirmar">
+            <button type="submit" class="btn-confirmar">
                 <i class="bi bi-check-circle"></i> Finalizar Cadastro
             </button>
         </div>
+
         <div class="area-botoes">
-             <a class="btn-voltar" href="homeclientes">
-        <i class="bi bi-arrow-left"></i> Voltar
-    </a>
+            <a class="btn-voltar" href="homeclientes">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </a>
         </div>
-
-    </form>
- 
-
+</form>
 </x-layout>

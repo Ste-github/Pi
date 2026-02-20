@@ -1,6 +1,5 @@
 <x-layout titulo="Cadastro de Produto">
-
-    <form class="form-produto">
+    <form class="form-produto" action="cadProduto/salvarP" method="GET">
 
         <!-- Nome do Produto -->
         <div class="campo">
@@ -9,7 +8,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-box-seam"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Nome...">
+                <input type="text" name="nomeProduto" class="form-control" placeholder="Nome do Produto..." id="nomeProduto" required>
             </div>
         </div>
 
@@ -20,7 +19,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-currency-dollar"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Valor com desconto...">
+                <input type="text" name="valor" class="form-control" placeholder="Valor do Produto..." id="valor" required>
             </div>
         </div>
 
@@ -31,7 +30,7 @@
                 <span class="input-group-text">
                     <i class="bi bi-tag"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Valor...">
+                <input type="text" name="valorDesconto" class="form-control" placeholder="Valor com Desconto..." id="valorDesconto">
             </div>
         </div>
 
@@ -42,12 +41,12 @@
                 <span class="input-group-text">
                     <i class="bi bi-boxes"></i>
                 </span>
-                <input type="text" class="form-control" placeholder="Em estoque...">
+                <input type="number" name="estoque" class="form-control" placeholder="Em estoque..." id="estoque" required>
             </div>
         </div>
 
         <div class="area-botoes">
-            <button class="btn-confirmar">
+            <button type="submit" class="btn-confirmar">
                 <i class="bi bi-check-circle"></i> Finalizar Cadastro
             </button>
         </div>
