@@ -37,10 +37,39 @@ class loginController extends Controller
         $model = new funcionarioModel();
         $model->email = $email;
         $model->nomeUsuario = $nomeUsuario;
-        $model->senha = $senha;
+        $model->senha = Hash::make($senha);
         //Efetivar no banco
         $model->save();
 
         return redirect('/')->with('success', 'Usuário cadastrado com sucesso!');
     }//Fim da cadastrar
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'login' => 'required',
+            'senha' => 'required'
+        ]);
+
+        $loginInput = $request->login;
+
+        // Verifica se é email
+        if (filter_var($loginInput, FILTER_VALIDATE_EMAIL)) {
+            $funcionario = funcionarioModel::where('email', $loginInput)->first();
+        } else {
+            $funcionario = funcionarioModel::where('nomeUsuario', $loginInput)->first();
+        }
+
+        if ($funcionario && Hash::check($request->senha, $funcionario->senha)) {
+
+            session([
+                'funcionario_id' => $funcionario->id,
+                'funcionario_nome' => $funcionario->nomeUsuario
+            ]);
+
+            return redirect('/vendas');
+        }
+
+        return back()->with('erro', 'Credenciais inválidas!');
+    }
 }//Fim da classe model

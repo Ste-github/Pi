@@ -9,6 +9,7 @@
                     <th>Valor</th>
                     <th>Valor com Desconto</th>
                     <th>Em Estoque</th>
+                    <th>Editar</th>
                     
                 </tr>
             </thead>

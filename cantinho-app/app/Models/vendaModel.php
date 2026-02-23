@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\itensvendaModel;
 
-class Venda extends Model
+class vendaModel extends Model
 {
     use HasFactory;
-
+protected $table = 'vendas';
     protected $fillable = [
         'funcionario_id',
         'atendente_id',
@@ -37,6 +38,6 @@ class Venda extends Model
 
     public function itens()
     {
-        return $this->hasMany(ItemVenda::class);
+        return $this->hasMany(itensvendaModel::class, 'venda_id');
     }
 }

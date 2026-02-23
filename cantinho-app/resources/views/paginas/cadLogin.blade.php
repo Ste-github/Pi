@@ -46,17 +46,15 @@
 
                
          <div class="area-botoes">
-            <a class="btn-confirmar" href="gerenciar">
+            <button type="submit" class="btn-confirmar">
                <i class="bi bi-check-circle"></i> Finalizar Cadastro
-            </a>
+            </button>
         </div> 
 
          <div class="area-botoes">
             <a class="btn-voltar" href="/">
                <i class="bi bi-arrow-left"></i> Voltar
             </a>
-        </div>
-        
-              
+        </div>      
     </form>
 </x-layout>

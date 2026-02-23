@@ -9,4 +9,8 @@ class produtosModel extends Model
 {
     use HasFactory;
     protected $table='produtos';
+    protected $casts = [
+        'valor' => 'float',
+        'valorDesconto' => 'float',
+    ];
 }

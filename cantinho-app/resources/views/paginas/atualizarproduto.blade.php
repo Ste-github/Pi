@@ -45,6 +45,17 @@
             </div>
         </div>
 
+        <!-- Desconto -->
+        <div class="campo">
+            <label>Produto em Estoque</label>
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-tag"></i>
+                </span>
+                <input class="form-control" type="number@" name="estoque" id="estoque" value="{{$dado->estoque}}">
+            </div>
+        </div>
+
         <div class="area-botoes">
             <button type="submit" class="btn-confirmar">
                 <i class="bi bi-arrow-repeat"></i> Atualizar
@@ -63,8 +74,4 @@
             </a>
         </div>
     </form>
-
-   
-
 </x-layout>
-

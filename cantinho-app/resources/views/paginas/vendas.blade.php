@@ -1,83 +1,116 @@
 <x-layout titulo="TELA DE VENDAS">
-
-<div class="pdv-container">
+  <link rel="stylesheet" href="/css/vendas.css">
+<div class="container">
 
    
 
-    <!-- Barra superior -->
-    <div class="pdv-topo">
-        <div class="pdv-tipo">
-            <strong>Tipo de venda</strong>
+    @if(session('erro'))
+        <div class="alert alert-danger">{{ session('erro') }}</div>
+    @endif
 
-            <label>
-                <input type="checkbox" checked> Público
-            </label>
+    @if(session('sucesso'))
+        <div class="alert alert-success">{{ session('sucesso') }}</div>
+    @endif
 
-            <label>
-                <input type="checkbox"> Funcionários
-            </label>
+    <form action="{{ route('vendas.addItem') }}" method="POST">
+        @csrf
+        <div>
+            <label>Nome ou Código do Produto</label>
+            <input type="text" name="produto_codigo" required>
+
+            <label>Quantidade</label>
+            <input type="number" name="quantidade" value="1" min="1">
+
+            <label>Tipo de Venda</label>
+            <select name="tipo_venda">
+                <option value="publico">Público</option>
+                <option value="funcionarios">Funcionários Besni</option>
+            </select>
+
+            <button type="submit">Adicionar</button>
         </div>
+    </form>
 
-        <div class="pdv-atendente">
-            👤 Atendente : Lucia
-        </div>
-    </div>
-
-    <!-- Campo busca -->
-    <div class="pdv-busca">
-        <input type="text" placeholder="Digite o nome ou código do produto...">
-    </div>
-
-    <!-- Tabela -->
-    <table class="pdv-tabela">
+    <table border="1" width="100%">
         <thead>
             <tr>
                 <th>Item</th>
                 <th>Produto</th>
                 <th>Quantidade</th>
-                <th>Preço Unit.</th>
+                <th>Valor Unit.</th>
                 <th>Total</th>
+                <th>Excluir</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td>01</td>
-                <td>Coxinha</td>
-                <td>2</td>
-                <td>R$9,90</td>
-                <td>R$19,80</td>
-            </tr>
-
-            <tr>
-                <td>02</td>
-                <td>Café c/ Leite Médio</td>
-                <td>1</td>
-                <td>R$8,50</td>
-                <td>R$8,50</td>
-            </tr>
+            @forelse($itens as $index => $item)
+                <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $item['nomeProduto'] }}</td>
+                    <td>{{ $item['quantidade'] }}</td>
+                    <td>R$ {{ number_format($item['valor_unitario'],2,',','.') }}</td>
+                    <td>R$ {{ number_format($item['subtotal'],2,',','.') }}</td>
+                    <td>
+                        <form method="POST" action="{{ route('vendas.removeItem', $index) }}">
+                            @csrf
+                            <button type="submit">🗑</button>
+                        </form>
+                    </td>
+                </tr>
+            @empty
+                <tr>
+                    <td colspan="6">Nenhum item adicionado</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
+    
+    @php
+        $subtotal = collect($itens)->sum('subtotal');
+    @endphp
 
-    <!-- Resumo -->
-    <div class="pdv-resumo">
-        <div class="pdv-esquerda">
-            <p>Subtotal: <strong>R$28,30</strong></p>
-            <p>Desconto: <strong>R$0,00</strong></p>
-        </div>
-
-        <div class="pdv-direita">
-            <p>Desconto: <strong>R$0,00</strong></p>
-            <h3>TOTAL: R$28,30</h3>
-        </div>
+    <div>
+        <strong>Subtotal: R$ {{ number_format($subtotal,2,',','.') }}</strong>
     </div>
 
-    <!-- Botões -->
-    <div class="pdv-botoes">
-        <a href="gerenciar" class="pdv-btn cancelar">Cancelar Compra</a>
-        <a href="itensVenda" class="pdv-btn finalizar">Finalizar Compra</a>
-    </div>
+    <form action="{{ route('vendas.finalizar') }}" method="POST">
+        @csrf <br><br><br><br>
+        <div class="pagamento-box">
 
+    <div class="pagamento-grid">
+
+        <div>
+            <label>Forma de Pagamento</label>
+            <select name="forma_pagamento" required>
+                <option value="">Selecione</option>
+                <option value="credito">Crédito</option>
+                <option value="debito">Débito</option>
+                <option value="pix">Pix</option>
+                <option value="dinheiro">Dinheiro</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Valor Recebido</label>
+            <input type="number" step="0.01" name="valor_recebido">
+        </div>
+
+        <div>
+            <label>Desconto</label>
+            <input type="number" step="0.01" name="desconto">
+        </div>
+
+    </div>
+        <button type="submit">Finalizar Venda</button>
+    </form>
+        <div class="area-botoes">
+            <a class="btn-voltar" href="gerenciar">
+               <i class="bi bi-arrow-left"></i> Voltar
+            </a>
+        </div>
 </div>
 
+
+    
+</div>
 </x-layout>

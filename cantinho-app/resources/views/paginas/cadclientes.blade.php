@@ -1,5 +1,5 @@
 <x-layout titulo="Cadastro de Cliente">
-    <form class="form-produto" action="cadclientes/SalvarC" method="GET">
+    <form class="form-produto" action="cadclientes/salvarC" method="GET">
 
         <!-- NOME -->
         <div class="campo">
@@ -49,7 +49,7 @@
             <label>Dívida</label>
             <div class="input-group">
                 <span class="input-group-text">
-                    <i class="bi bi-telephone"></i>
+                    <i class="bi bi-currency-dollar"></i>
                 </span>
                 <input type="text" name="divida" class="form-control" placeholder="Dívida do Cliente..." id="divida" required>
             </div>
@@ -66,5 +66,5 @@
                 <i class="bi bi-arrow-left"></i> Voltar
             </a>
         </div>
-</form>
+    </form>
 </x-layout>

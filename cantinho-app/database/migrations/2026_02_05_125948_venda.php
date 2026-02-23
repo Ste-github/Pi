@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('vendas', function (Blueprint $table) {
             $table->id(); 
 
-            $table->foreignId('funcionario_id')->constrained('users');
+            $table->foreignId('funcionario_id')->nullable()->constrained('users');
             $table->foreignId('atendente_id')->nullable()->constrained('users');
             $table->foreignId('cliente_id')->nullable()->constrained('clientes');
 

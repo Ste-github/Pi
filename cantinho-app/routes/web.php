@@ -1,7 +1,8 @@
-
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\vendasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 //Telas de Login do Caio
 Route::get('/',[\App\Http\Controllers\loginController::Class,'paginaLogin']);
 Route::get('/cadLogin',[\App\Http\Controllers\loginController::Class,'paginaCadlogin']);
+Route::get('/cadastrarLogin', [\App\Http\Controllers\loginController::class,'cadastrar']);
+Route::post('/login', [loginController::class, 'login']);
 
 //Páginas CRUD Produto +Cliente 
 Route::get('/gerenciar',[\App\Http\Controllers\GerenciarController::Class,'paginaGerenciar']);
@@ -41,7 +44,20 @@ Route::get('/excluircliente',[\App\Http\Controllers\GerenciarController::Class,'
 //Páginas Vendas 
 Route::get('/produtos',[\App\Http\Controllers\produtosController::Class,'paginaProdutos']);
 Route::get('/itensVenda',[\App\Http\Controllers\itensvendaController::Class,'paginaItens']);
-Route::get('/vendas',[\App\Http\Controllers\vendasController::Class,'paginaVendas']); 
+
+Route::get('/vendas', [vendasController::class, 'index'])->name('vendas.index');
+
+Route::post('/vendas/adicionar-item', 
+    [vendasController::class, 'adicionarItem']
+)->name('vendas.addItem');
+
+Route::post('/vendas/remover-item/{index}', 
+    [vendasController::class, 'removerItem']
+)->name('vendas.removeItem');
+
+Route::post('/vendas/finalizar', 
+    [vendasController::class, 'finalizar']
+)->name('vendas.finalizar');
 //--------------------------------------------------------------------------------------------------------------------------------------
 //CRUD Cadastrar Produto
 //Rota para as telas de produto

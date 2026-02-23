@@ -48,6 +48,4 @@ class gerenciarController extends Controller
     public function paginaExcluircliente(){
         return view('paginas.excluircliente');
     }
-
-
 }

@@ -1,162 +1,184 @@
-/* Fundo geral */
-.pdv-container {
-    width: 90%;
-    padding: 30px 60px;
-   
+/* ===== FUNDO DA PÁGINA ===== */
+body {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    font-family: 'Segoe UI', sans-serif;
 }
 
-/* Título */
-.pdv-titulo {
-    text-align: center;
-    background-color: #0f6d3b;
-    color: white;
-    padding: 15px;
-    margin-bottom: 20px;
-    font-weight: bold;
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 90%; /*tela branca fundo*/
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Barra topo */
-.pdv-topo {
+/* ===== TÍTULO ===== */
+h2 {
+    color: #4e6b4e;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form div {
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
-.pdv-tipo label {
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-/* Busca */
-.pdv-busca input {
-    width: 100%;
-    padding: 15px;
-    background-color: #cfcfcf;
-    border: none;
-    font-size: 18px;
     margin-bottom: 20px;
 }
 
-/* Tabela */
-.pdv-tabela {
+label {
+    font-weight: 500;
+    color: #5d4037;
+}
+
+/* ===== INPUTS ===== */
+input, select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #c8e6c9;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #81c784;
+    box-shadow: 0 0 5px rgba(129, 199, 132, 0.4);
+}
+
+/* ===== BOTÕES ===== */
+button {
+    background-color: #81c784;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #66bb6a;
+    transform: translateY(-2px);
+}
+
+/* ===== BOTÃO FINALIZAR ===== */
+form:last-of-type button {
+    background-color: #6d4c41;
+}
+
+form:last-of-type button:hover {
+    background-color: #5d4037;
+}
+
+/* ===== TABELA ===== */
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.pdv-tabela thead {
-    background-color: #5a2e2e;
-    color: white;
-}
-
-.pdv-tabela th,
-.pdv-tabela td {
-    padding: 18px;
-    border: 1px solid #5a2e2e;
-    text-align: center;
-    font-size: 18px;
-}
-
-.pdv-tabela tbody tr {
-    background-color: #dcdcdc;
-}
-
-/* Resumo */
-.pdv-resumo {
-    display: flex;
-    margin-top: 20px;
-    border: 2px solid black;
-}
-
-.pdv-esquerda {
-    flex: 1;
-    background-color: #5a2e2e;
-    color: white;
-    padding: 25px;
-    font-size: 20px;
-}
-
-.pdv-direita {
-    flex: 1;
-    background-color: #e7d3b5;
-    padding: 25px;
-    font-size: 22px;
-}
-
-.pdv-direita h3 {
-    margin-top: 15px;
-    font-size: 28px;
-}
-
-/* Botões */
-.pdv-botoes {
-    display: flex;
-    justify-content: space-between;
     margin-top: 25px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.pdv-btn {
-    padding: 15px 35px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+thead {
+    background-color: #a5d6a7;
+    color: #3e2723;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+tbody tr:hover {
+    background-color: #e0f2f1;
+    transition: 0.3s;
+}
+
+/* ===== BOTÃO EXCLUIR ===== */
+td form button {
+    background-color: #bcaaa4;
+    padding: 6px 10px;
+}
+
+td form button:hover {
+    background-color: #a1887f;
+}
+
+/* ===== SUBTOTAL ===== */
+strong {
     font-size: 18px;
-    box-shadow: 2px 3px 0px rgba(0,0,0,0.3);
+    color: #4e342e;
 }
 
-.pdv-btn.cancelar {
-    background-color: #5a2e2e;
-    color: white;
+/* ===== ALERTAS ===== */
+.alert {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.pdv-btn.finalizar {
-    background-color: #5a2e2e;
-    color: white;
+.alert-danger {
+    background-color: #ffebee;
+    color: #c62828;
 }
 
-.pdv-btn:hover {
-    opacity: 0.85;
+.alert-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
 }
-/*-------------------------------------------------*/
+/* ===== ÁREA DE PAGAMENTO ===== */
 .pagamento-box {
     margin-top: 25px;
-    background-color: #dcdcdc;
-    padding: 25px;
-    border: 2px solid #5a2e2e;
+    padding: 20px;
+    background: linear-gradient(135deg, #f1f8e9, #ffffff);
+    border: 1px solid #c8e6c9;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.pagamento-box h4 {
-    margin-bottom: 20px;
-    font-size: 20px;
+.pagamento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.pagamento-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #4e342e;
+}
+
+.pagamento-box input,
+.pagamento-box select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #a5d6a7;
+    background-color: #ffffff;
+}
+
+.pagamento-box input:focus,
+.pagamento-box select:focus {
+    border-color: #66bb6a;
+    box-shadow: 0 0 6px rgba(102, 187, 106, 0.4);
+}
+
+/* ===== CAMPO TROCO ===== */
+.troco-box {
+    margin-top: 15px;
     font-weight: bold;
-}
-
-/* Opções */
-.pagamento-opcoes {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 25px;
     font-size: 18px;
-    font-weight: bold;
+    color: #2e7d32;
 }
-
-/* Campos */
-.pagamento-campos {
-    display: flex;
-    gap: 40px;
-}
-
-.campo-pagamento {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.campo-pagamento label {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-
